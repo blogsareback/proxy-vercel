@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "",
+  "outputDirectory": "",
+  "rewrites": [
+    { "source": "/health", "destination": "/api/health" },
+    { "source": "/fetch", "destination": "/api/fetch" },
+    { "source": "/parse", "destination": "/api/parse" },
+    { "source": "/discover", "destination": "/api/discover" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, X-API-Key" },
+        { "key": "Access-Control-Max-Age", "value": "86400" }
+      ]
+    }
+  ],
+  "functions": {
+    "api/parse.ts": {
+      "maxDuration": 30
+    },
+    "api/fetch.ts": {
+      "maxDuration": 30
+    },
+    "api/discover.ts": {
+      "maxDuration": 45
+    }
+  }
+}

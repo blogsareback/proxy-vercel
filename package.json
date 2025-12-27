@@ -1,0 +1,23 @@
+{
+  "name": "bab-proxy-vercel",
+  "version": "2.0.0",
+  "description": "Self-hosted CORS proxy for Blogs Are Back - Vercel deployment",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.5.0",
+    "linkedom": "^0.18.9",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vercel/node": "^5.0.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
