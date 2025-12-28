@@ -138,6 +138,3 @@ If you deployed via the one-click button, your project is linked to this reposit
 
 Or set up automatic deployments by connecting to your own fork.
 
-## License
-
-MIT
